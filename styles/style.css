@@ -13,7 +13,8 @@
   cursor: pointer;
 }
 .paragraph {
-  font-size: 20px;
+  font-size: 18px;
+  margin: 10px 0;
 }
 
 /* header styles */
@@ -88,8 +89,7 @@ nav li a {
   font-size: 4rem;
 }
 .teams-content {
-  padding-left: 70px;
-  padding-right: 70px;
+  margin-left: 50px;
 }
 .team-title .quick-list {
   color: #727272;
@@ -98,6 +98,37 @@ nav li a {
 .team-title .text-features {
   color: #ff900e;
   font-weight: 700;
+}
+
+/* Facts Styles */
+
+.facts {
+  padding: 30px;
+}
+/* .facts-description {
+  width: 550px;
+} */
+
+.facts-card-container .card {
+  border: 2px solid #ff900e;
+  border-radius: 10px;
+  text-align: center;
+  padding: 40px 40px;
+}
+
+.facts-card-container .card-stats {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.facts-card-container .card-title {
+  font-weight: 600;
+}
+
+.facts-card-container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 40px;
 }
 
 /* Responsive Styles */
@@ -115,27 +146,27 @@ nav li a {
   .teams-image {
     grid-template-columns: repeat(1, 1fr);
   }
-  /* .teams-content {
-    padding: 20px;
-  } */
+  .facts-card-container {
+    flex-direction: column;
+  }
+  .facts-card-container .card {
+    margin: 10px 0;
+  }
 }
 
 /* Medium Device */
 @media screen and (min-width: 576px) and (max-width: 960px) {
   header {
-    padding: 50px;
+    padding: 20px;
   }
   nav {
     flex-direction: column;
   }
   .teams-section {
     flex-direction: column-reverse;
-    padding: 40px;
+    padding: 20px;
   }
   .teams-image {
     grid-template-columns: repeat(2, 1fr);
-  }
-  .teams-content {
-    padding: 40px;
   }
 }
